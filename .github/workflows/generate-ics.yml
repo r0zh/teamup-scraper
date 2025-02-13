@@ -1,0 +1,42 @@
+name: Generate ICS File
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs every day at midnight UTC
+  push:
+    branches:
+      - main
+
+jobs:
+  generate-ics:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+
+      - name: Set up Python 3.13
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13' 
+
+      - name: Install uv
+        run: |
+          pip install -U uv
+
+      - name: Create virtual environment and install dependencies
+        run: |
+          uv sync
+          uv sync --extra compile
+
+      - name: Fetch Teamup data and generate ICS
+        run: |
+          uv run generate_ics.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add calendar.ics
+          git commit -m "Update calendar.ics" || echo "No changes to commit"
+          git push origin main
