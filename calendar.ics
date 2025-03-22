@@ -629,7 +629,7 @@ SUMMARY:Arquitectura de Computadores
 DTSTART;TZID=Africa/Blantyre:20250403T084500
 DTEND;TZID=Africa/Blantyre:20250403T104500
 DESCRIPTION:<p>GG</p>
-LOCATION:3.0.9
+LOCATION:Laboratorios AC
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Identidad Digital y Privacidad
