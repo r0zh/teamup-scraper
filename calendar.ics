@@ -1350,7 +1350,7 @@ SUMMARY:Matem. II
 DTSTART;TZID=Africa/Blantyre:20250603T084500
 DTEND;TZID=Africa/Blantyre:20250603T104500
 DESCRIPTION:<p>Pruebas Parciales de Evaluación del Tema 4</p>
-LOCATION:Aula POR DETERMINAR
+LOCATION:Aula 2.0.7
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Fundamentos de Inteligencia Artificial
