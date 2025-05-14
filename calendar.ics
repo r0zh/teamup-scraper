@@ -1077,7 +1077,8 @@ SUMMARY:Matem. II
 DTSTART;TZID=Africa/Blantyre:20250514T124500
 DTEND;TZID=Africa/Blantyre:20250514T143000
 DESCRIPTION:<p>GG</p>
-LOCATION:3.0.9
+LOCATION:Al principio: aula 3.0.9 (resolver dudas) + Después: despacho 2.
+ 2.24 (revisión examen)
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Arquitectura de Computadores
