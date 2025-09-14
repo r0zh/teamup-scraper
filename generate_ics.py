@@ -6,8 +6,8 @@ import pytz
 # Constants
 TEAMUP_API_URL = "https://teamup.com/ksfogsn8nf72mjdfcv/events"
 SUBCALENDAR_ID = 13671838  # id of 2ºCIA subcalendar
-START_DATE = "2025-02-13"
-END_DATE = "2025-06-07"
+START_DATE = "2025-09-08"
+END_DATE = "2026-06-07"
 TIMEZONE = "Europe/Madrid"
 
 
