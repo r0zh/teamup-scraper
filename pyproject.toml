@@ -3,9 +3,9 @@ name = "teamup-scraper"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.10.16"
+requires-python = ">=3.11"
 dependencies = [
-    "icalendar>=6.1.1",
-    "pytz>=2025.1",
-    "requests>=2.32.3",
+    "icalendar>=6.3.1",
+    "pytz>=2025.2",
+    "requests>=2.32.5",
 ]
