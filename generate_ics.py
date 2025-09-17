@@ -41,15 +41,13 @@ def create_ical_event(event):
     start_dt = datetime.fromisoformat(event["start_dt"].replace("Z", "+00:00"))
     end_dt = datetime.fromisoformat(event["end_dt"].replace("Z", "+00:00"))
 
-    # Add timezone information if datetime is naive
-    timezone = pytz.timezone(TIMEZONE)
-    if start_dt.tzinfo is None:
-        start_dt = timezone.localize(start_dt)
-    if end_dt.tzinfo is None:
-        end_dt = timezone.localize(end_dt)
+    # Add timezone information
+    tz = pytz.timezone(TIMEZONE)
+    start_dt_tz = start_dt.astimezone(tz)
+    end_dt_tz = end_dt.astimezone(tz)
 
-    ical_event.add("dtstart", start_dt)
-    ical_event.add("dtend", end_dt)
+    ical_event.add("dtstart", start_dt_tz)
+    ical_event.add("dtend", end_dt_tz)
 
     # Add location
     location = event.get("location")
